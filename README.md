@@ -16,6 +16,20 @@ some bluetooth library, which not always worked with used hardware and software.
 ### How to use
 Because the module is just 2 files, you can just copy them to your project and use it as you want.
 
+First you need to initialize the class with your device name:
+```python
+from bthome_pyadvertisement import BTHomeAdvertisementData
+
+bthome = BTHomeAdvertisementData(advertisement_name="MyDevice")
+```
+
+Then you can get the advertisement data by passing your measurements to the class:
+```python
+adv_data = bthome.get_advertisement_data(temperature=28)
+```
+
+The `get_advertisement_data` method can be called with many kwargs, which will be parsed to BTHome format.
+All available kwargs are listed in `bthome_sensor_data.json` file and the code uses this file.
 
 ### Example
 ```python
