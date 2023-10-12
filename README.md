@@ -19,7 +19,7 @@ Because the module is just 2 files, you can just copy them to your project and u
 
 ### Example
 ```python
-from upy_bthome import BTHomeAdvertisementData
+from bthome_pyadvertisement import BTHomeAdvertisementData
 
 bthome = BTHomeAdvertisementData(advertisement_name="MyDevice")
 adv_data = bthome.get_advertisement_data(temperature=28)
