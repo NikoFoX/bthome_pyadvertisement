@@ -86,7 +86,3 @@ class BTHomeAdvertisementData:
 
         advertisement_data = advertisement_flags_bytes + service_data_bytes + local_name
         return advertisement_data
-
-
-bthome = BTHomeAdvertisementData(advertisement_name="ESP32")
-adv_data = bthome.get_advertisement_data(temperature=28)
