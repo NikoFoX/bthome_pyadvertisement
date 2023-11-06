@@ -33,7 +33,7 @@ class BTHomeAdvertisementData:
         # Reverse the order of the bytes
         bytes_array.reverse()
 
-        little_endian_bytes = bytes(bytes_array)
+        little_endian_bytes = bytes_array
         return little_endian_bytes
 
     def get_sensor_data_bytes(self, sensor_data: dict):
@@ -51,8 +51,9 @@ class BTHomeAdvertisementData:
             measurement_bytes_value = self.value_to_little_endian(
                 measurement=value,
                 measurement_factor=measurement["factor"],
-                bytes_count=measurement["bytes"],
+                bytes_count=measurement["data_bytes_count"],
             )
+            measurement_bytes.extend([int(measurement["service_data_byte"], 16)])
             measurement_bytes.extend(measurement_bytes_value)
         return measurement_bytes
 
@@ -79,14 +80,10 @@ class BTHomeAdvertisementData:
 
         # We need to add 1 byte which is the length of the service data
         service_data_bytes_length = len(service_data_bytes)
-        service_data_bytes = bytearray([service_data_bytes_length]) + service_data_bytes
+        service_data_bytes = bytearray([service_data_bytes_length] + service_data_bytes)
 
         # Local name
         local_name = self.adv_local_name
 
         advertisement_data = advertisement_flags_bytes + service_data_bytes + local_name
         return advertisement_data
-
-
-bthome = BTHomeAdvertisementData(advertisement_name="ESP32")
-adv_data = bthome.get_advertisement_data(temperature=28)
