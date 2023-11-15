@@ -1,217 +1,260 @@
 {
-    "acceleration": {
-        "service_data_byte": "0x51",
-        "data_bytes_count": 2,
-        "factor": 0.001
-    },
-    "battery": {
-        "service_data_byte": "0x01",
-        "data_bytes_count": 1,
-        "factor": 1
-    },
-    "co2": {
-        "service_data_byte": "0x12",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "count": {
-        "service_data_byte": "0x09",
-        "data_bytes_count": 1,
-        "factor": 1
-    },
-    "count_2": {
-        "service_data_byte": "0x3D",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "count_3": {
-        "service_data_byte": "0x3E",
-        "data_bytes_count": 4,
-        "factor": 1
-    },
-    "current": {
-        "service_data_byte": "0x43",
-        "data_bytes_count": 2,
-        "factor": 0.001
-    },
-    "dewpoint": {
-        "service_data_byte": "0x08",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "distance_mm": {
-        "service_data_byte": "0x40",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "distance_m": {
-        "service_data_byte": "0x41",
-        "data_bytes_count": 2,
-        "factor": 0.1
-    },
-    "duration": {
-        "service_data_byte": "0x42",
-        "data_bytes_count": 3,
-        "factor": 0.001
-    },
-    "energy": {
-        "service_data_byte": "0x4D",
-        "data_bytes_count": 4,
-        "factor": 0.001
-    },
-    "energy_2": {
-        "service_data_byte": "0x0A",
-        "data_bytes_count": 3,
-        "factor": 0.001
-    },
-    "gas": {
-        "service_data_byte": "0x4B",
-        "data_bytes_count": 3,
-        "factor": 0.001
-    },
-    "gas_2": {
-        "service_data_byte": "0x4C",
-        "data_bytes_count": 4,
-        "factor": 0.001
-    },
-    "gyroscope": {
-        "service_data_byte": "0x52",
-        "data_bytes_count": 2,
-        "factor": 0.001
-    },
-    "humidity": {
-        "service_data_byte": "0x03",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "humidity_2": {
-        "service_data_byte": "0x2E",
-        "data_bytes_count": 1,
-        "factor": 1
-    },
-    "illuminance": {
-        "service_data_byte": "0x05",
-        "data_bytes_count": 3,
-        "factor": 0.01
-    },
-    "mass_kg": {
-        "service_data_byte": "0x06",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "mass_lb": {
-        "service_data_byte": "0x07",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "moisture": {
-        "service_data_byte": "0x14",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "moisture_2": {
-        "service_data_byte": "0x2F",
-        "data_bytes_count": 1,
-        "factor": 1
-    },
-    "pm2_5": {
-        "service_data_byte": "0x0D",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "pm10": {
-        "service_data_byte": "0x0E",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "power": {
-        "service_data_byte": "0x0B",
-        "data_bytes_count": 3,
-        "factor": 0.01
-    },
-    "pressure": {
-        "service_data_byte": "0x04",
-        "data_bytes_count": 3,
-        "factor": 0.01
-    },
-    "raw": {
-        "service_data_byte": "0x54",
-        "data_bytes_count": 0,
-        "factor": 0
-    },
-    "rotation": {
-        "service_data_byte": "0x3F",
-        "data_bytes_count": 2,
-        "factor": 0.1
-    },
-    "speed": {
-        "service_data_byte": "0x44",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "temperature": {
-        "service_data_byte": "0x45",
-        "data_bytes_count": 2,
-        "factor": 0.1
-    },
-    "temperature_2": {
-        "service_data_byte": "0x02",
-        "data_bytes_count": 2,
-        "factor": 0.01
-    },
-    "text": {
-        "service_data_byte": "0x53",
-        "data_bytes_count": 0,
-        "factor": 0
-    },
-    "timestamp": {
-        "service_data_byte": "0x50",
-        "data_bytes_count": 4,
-        "factor": 0
-    },
-    "tvoc": {
-        "service_data_byte": "0x13",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "voltage": {
-        "service_data_byte": "0x0C",
-        "data_bytes_count": 2,
-        "factor": 0.001
-    },
-    "voltage_2": {
-        "service_data_byte": "0x4A",
-        "data_bytes_count": 2,
-        "factor": 0.1
-    },
-    "volume": {
-        "service_data_byte": "0x4E",
-        "data_bytes_count": 4,
-        "factor": 0.001
-    },
-    "volume_2": {
-        "service_data_byte": "0x47",
-        "data_bytes_count": 2,
-        "factor": 0.1
-    },
-    "volume_3": {
-        "service_data_byte": "0x48",
-        "data_bytes_count": 2,
-        "factor": 1
-    },
-    "volume_flow_rate": {
-        "service_data_byte": "0x49",
-        "data_bytes_count": 2,
-        "factor": 0.001
-    },
-    "uv_index": {
-        "service_data_byte": "0x46",
-        "data_bytes_count": 1,
-        "factor": 0.1
-    },
-    "water": {
-        "service_data_byte": "0x4F",
-        "data_bytes_count": 4,
-        "factor": 0.001
-    }
+  "acceleration": {
+    "service_data_byte": "0x51",
+    "data_bytes_count": 2,
+    "factor": 0.001,
+    "data_type": "uint16"
+  },
+  "battery": {
+    "service_data_byte": "0x01",
+    "data_bytes_count": 1,
+    "factor": 1,
+    "data_type": "uint8"
+  },
+  "co2": {
+    "service_data_byte": "0x12",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "count": {
+    "service_data_byte": "0x09",
+    "data_bytes_count": 1,
+    "factor": 1,
+    "data_type": "uint"
+  },
+  "count_2": {
+    "service_data_byte": "0x3D",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint"
+  },
+  "count_3": {
+    "service_data_byte": "0x3E",
+    "data_bytes_count": 4,
+    "factor": 1,
+    "data_type": "uint"
+  },
+  "current": {
+    "service_data_byte": "0x43",
+    "data_bytes_count": 2,
+    "factor": 0.001,
+    "data_type": "uint16"
+  },
+  "dewpoint": {
+    "service_data_byte": "0x08",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "sint16"
+  },
+  "distance_mm": {
+    "service_data_byte": "0x40",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "distance_m": {
+    "service_data_byte": "0x41",
+    "data_bytes_count": 2,
+    "factor": 0.1,
+    "data_type": "uint16"
+  },
+  "duration": {
+    "service_data_byte": "0x42",
+    "data_bytes_count": 3,
+    "factor": 0.001,
+    "data_type": "uint24"
+  },
+  "energy": {
+    "service_data_byte": "0x4D",
+    "data_bytes_count": 4,
+    "factor": 0.001,
+    "data_type": "uint32"
+  },
+  "energy_2": {
+    "service_data_byte": "0x0A",
+    "data_bytes_count": 3,
+    "factor": 0.001,
+    "data_type": "uint24"
+  },
+  "gas": {
+    "service_data_byte": "0x4B",
+    "data_bytes_count": 3,
+    "factor": 0.001,
+    "data_type": "uint24"
+  },
+  "gas_2": {
+    "service_data_byte": "0x4C",
+    "data_bytes_count": 4,
+    "factor": 0.001,
+    "data_type": "uint32"
+  },
+  "gyroscope": {
+    "service_data_byte": "0x52",
+    "data_bytes_count": 2,
+    "factor": 0.001,
+    "data_type": "uint16"
+  },
+  "humidity": {
+    "service_data_byte": "0x03",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "uint16"
+  },
+  "humidity_2": {
+    "service_data_byte": "0x2E",
+    "data_bytes_count": 1,
+    "factor": 1,
+    "data_type": "uint8"
+  },
+  "illuminance": {
+    "service_data_byte": "0x05",
+    "data_bytes_count": 3,
+    "factor": 0.01,
+    "data_type": "uint24"
+  },
+  "mass_kg": {
+    "service_data_byte": "0x06",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "uint16"
+  },
+  "mass_lb": {
+    "service_data_byte": "0x07",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "uint16"
+  },
+  "moisture": {
+    "service_data_byte": "0x14",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "uint16"
+  },
+  "moisture_2": {
+    "service_data_byte": "0x2F",
+    "data_bytes_count": 1,
+    "factor": 1,
+    "data_type": "uint8"
+  },
+  "pm2.5": {
+    "service_data_byte": "0x0D",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "pm10": {
+    "service_data_byte": "0x0E",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "power": {
+    "service_data_byte": "0x0B",
+    "data_bytes_count": 3,
+    "factor": 0.01,
+    "data_type": "uint24"
+  },
+  "pressure": {
+    "service_data_byte": "0x04",
+    "data_bytes_count": 3,
+    "factor": 0.01,
+    "data_type": "uint24"
+  },
+  "raw": {
+    "service_data_byte": "0x54",
+    "data_bytes_count": -1,
+    "factor": null,
+    "data_type": "see below"
+  },
+  "rotation": {
+    "service_data_byte": "0x3F",
+    "data_bytes_count": 2,
+    "factor": 0.1,
+    "data_type": "sint16"
+  },
+  "speed": {
+    "service_data_byte": "0x44",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "uint16"
+  },
+  "temperature": {
+    "service_data_byte": "0x45",
+    "data_bytes_count": 2,
+    "factor": 0.1,
+    "data_type": "sint16"
+  },
+  "temperature_2": {
+    "service_data_byte": "0x02",
+    "data_bytes_count": 2,
+    "factor": 0.01,
+    "data_type": "sint16"
+  },
+  "text": {
+    "service_data_byte": "0x53",
+    "data_bytes_count": -1,
+    "factor": null,
+    "data_type": "see below"
+  },
+  "timestamp": {
+    "service_data_byte": "0x50",
+    "data_bytes_count": 4,
+    "factor": null,
+    "data_type": "uint48"
+  },
+  "tvoc": {
+    "service_data_byte": "0x13",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "voltage": {
+    "service_data_byte": "0x0C",
+    "data_bytes_count": 2,
+    "factor": 0.001,
+    "data_type": "uint16"
+  },
+  "voltage_2": {
+    "service_data_byte": "0x4A",
+    "data_bytes_count": 2,
+    "factor": 0.1,
+    "data_type": "uint16"
+  },
+  "volume": {
+    "service_data_byte": "0x4E",
+    "data_bytes_count": 4,
+    "factor": 0.001,
+    "data_type": "uint32"
+  },
+  "volume_2": {
+    "service_data_byte": "0x47",
+    "data_bytes_count": 2,
+    "factor": 0.1,
+    "data_type": "uint16"
+  },
+  "volume_3": {
+    "service_data_byte": "0x48",
+    "data_bytes_count": 2,
+    "factor": 1,
+    "data_type": "uint16"
+  },
+  "volume_4": {
+    "service_data_byte": "0x49",
+    "data_bytes_count": 2,
+    "factor": 0.001,
+    "data_type": "uint16"
+  },
+  "uv_index": {
+    "service_data_byte": "0x46",
+    "data_bytes_count": 1,
+    "factor": 0.1,
+    "data_type": "uint8"
+  },
+  "water": {
+    "service_data_byte": "0x4F",
+    "data_bytes_count": 4,
+    "factor": 0.001,
+    "data_type": "uint32"
+  }
 }
