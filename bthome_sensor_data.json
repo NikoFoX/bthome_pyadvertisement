@@ -165,7 +165,7 @@
     "service_data_byte": "0x54",
     "data_bytes_count": -1,
     "factor": null,
-    "data_type": "see below"
+    "data_type": "text"
   },
   "rotation": {
     "service_data_byte": "0x3F",

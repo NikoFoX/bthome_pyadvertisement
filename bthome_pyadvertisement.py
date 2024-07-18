@@ -109,13 +109,20 @@ class BTHomeAdvertisementData:
             measurement = bthome_sensor_data[key]
             log(f"Processing measurement: {key}: {value}")
 
-            if measurement["data_type"] == "text":  # Text sensor
+            if key == "text":  # Text sensor
                 text_bytes = value.encode("utf-8")
                 text_length = len(text_bytes)
                 measurement_bytes.extend(
                     [int(measurement["service_data_byte"], 16), text_length]
                 )
                 measurement_bytes.extend(text_bytes)
+                continue
+            elif key == "raw":  # Raw sensor
+                raw_length = len(value)
+                measurement_bytes.extend(
+                    [int(measurement["service_data_byte"], 16), raw_length]
+                )
+                measurement_bytes.extend(value.encode("utf-8"))
                 continue
 
             conversion_method = {

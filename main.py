@@ -46,7 +46,6 @@ def advertise_measurements():
         # "temperature_2": temp,
         # "humidity": humidity,
         "count_2": count,
-        "text": "Hello World!",
     }
     adv_data = bthome.get_advertisement_data(**measurement_value)
     ble.gap_advertise(
