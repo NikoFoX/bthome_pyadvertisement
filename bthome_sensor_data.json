@@ -195,7 +195,7 @@
     "service_data_byte": "0x53",
     "data_bytes_count": -1,
     "factor": null,
-    "data_type": "see below"
+    "data_type": "text"
   },
   "timestamp": {
     "service_data_byte": "0x50",

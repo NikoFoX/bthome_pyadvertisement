@@ -3,9 +3,10 @@ import struct
 import utime
 
 DEBUG = True
+LOG_TO_FILE = False
 
 
-def log_to_file(message):
+def log(message):
     timestamp = utime.localtime()
     formatted_time = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}".format(
         timestamp[0],
@@ -17,8 +18,9 @@ def log_to_file(message):
     )
     if DEBUG:
         print(f"{formatted_time} - {message}")
-    with open("log.txt", "a") as log_file:
-        log_file.write(f"{formatted_time} - {message}\n")
+    if LOG_TO_FILE:
+        with open("log.txt", "a") as log_file:
+            log_file.write(f"{formatted_time} - {message}\n")
 
 
 class BTHomeAdvertisementData:
@@ -100,12 +102,21 @@ class BTHomeAdvertisementData:
         bthome_sensor_data = json.load(open("bthome_sensor_data.json"))
         measurement_bytes = []
 
-        log_to_file(f"Sensor data: {sensor_data}")
+        log(f"Sensor data: {sensor_data}")
 
         # Measurement data
         for key, value in sensor_data.items():
             measurement = bthome_sensor_data[key]
-            log_to_file(f"Processing measurement: {key}: {value}")
+            log(f"Processing measurement: {key}: {value}")
+
+            if measurement["data_type"] == "text":  # Text sensor
+                text_bytes = value.encode("utf-8")
+                text_length = len(text_bytes)
+                measurement_bytes.extend(
+                    [int(measurement["service_data_byte"], 16), text_length]
+                )
+                measurement_bytes.extend(text_bytes)
+                continue
 
             conversion_method = {
                 "uint": self.float_to_uint_bytes,
@@ -128,7 +139,7 @@ class BTHomeAdvertisementData:
             measurement_bytes.extend([int(measurement["service_data_byte"], 16)])
             measurement_bytes.extend(measurement_bytes_value)
 
-        log_to_file(f"Measurement bytes: {measurement_bytes}")
+        log(f"Measurement bytes: {measurement_bytes}")
         return measurement_bytes
 
     def get_advertisement_data(self, **kwargs) -> bytes:
@@ -164,5 +175,5 @@ class BTHomeAdvertisementData:
         local_name = self.adv_local_name
 
         advertisement_data = advertisement_flags_bytes + service_data_bytes + local_name
-        log_to_file(f"Advertisement data: {advertisement_data}")
+        log(f"Advertisement data: {advertisement_data}")
         return advertisement_data

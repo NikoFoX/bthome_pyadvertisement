@@ -43,10 +43,10 @@ def advertise_measurements():
     humidity += 0.01
     pressure += 0.01
     measurement_value = {
-        "temperature_2": temp,
-        "humidity": humidity,
+        # "temperature_2": temp,
+        # "humidity": humidity,
         "count_2": count,
-        "pressure": pressure,
+        "text": "Hello World!",
     }
     adv_data = bthome.get_advertisement_data(**measurement_value)
     ble.gap_advertise(
